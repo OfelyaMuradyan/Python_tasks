@@ -26,13 +26,13 @@ def retrieve_data(data):
         print("There is no data")
 
 def update_data(data, target, new_data):
-    for item in data:
-        if target in item:
-            item.update(new_data)
+    for i in data:
+        if target in i:
+            i.update(new_data)
 
 def delete_data(data, target):
     old_data = len(data)
-    data = [item for item in data if target not in item]
+    data = [i for i in data if target not in i]
     if len(data) == old_data:
         print("Data not found.")
 
